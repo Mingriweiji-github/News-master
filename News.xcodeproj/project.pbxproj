@@ -23,6 +23,12 @@
 		C76AA8371F4C0DCC0074691F /* KKWeiTouTiaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA8361F4C0DCC0074691F /* KKWeiTouTiaoController.swift */; };
 		C76AA8391F4C0DE00074691F /* KKMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA8381F4C0DE00074691F /* KKMeViewController.swift */; };
 		C76AA83B1F4C1AF90074691F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA83A1F4C1AF90074691F /* UIColor+Extension.swift */; };
+		C76AA83D1F4C27600074691F /* HomeNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA83C1F4C27600074691F /* HomeNavigationView.swift */; };
+		C76AA83F1F4C291F0074691F /* HomeSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA83E1F4C291F0074691F /* HomeSearchField.swift */; };
+		C76AA8411F4C297C0074691F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA8401F4C297C0074691F /* UIView+Extension.swift */; };
+		C76AA8431F4C2CE70074691F /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA8421F4C2CE70074691F /* HomePageView.swift */; };
+		C76AA8451F4C2DDC0074691F /* HomeTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA8441F4C2DDC0074691F /* HomeTitleView.swift */; };
+		C76AA8471F4C2E630074691F /* HomeTopicTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA8461F4C2E630074691F /* HomeTopicTitle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +71,12 @@
 		C76AA8361F4C0DCC0074691F /* KKWeiTouTiaoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KKWeiTouTiaoController.swift; sourceTree = "<group>"; };
 		C76AA8381F4C0DE00074691F /* KKMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KKMeViewController.swift; sourceTree = "<group>"; };
 		C76AA83A1F4C1AF90074691F /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		C76AA83C1F4C27600074691F /* HomeNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavigationView.swift; sourceTree = "<group>"; };
+		C76AA83E1F4C291F0074691F /* HomeSearchField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSearchField.swift; sourceTree = "<group>"; };
+		C76AA8401F4C297C0074691F /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		C76AA8421F4C2CE70074691F /* HomePageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		C76AA8441F4C2DDC0074691F /* HomeTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTitleView.swift; sourceTree = "<group>"; };
+		C76AA8461F4C2E630074691F /* HomeTopicTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTopicTitle.swift; sourceTree = "<group>"; };
 		EDD9D9D6068A0E8752916FE8 /* Pods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.release.xcconfig"; path = "Pods/Target Support Files/Pods-News/Pods-News.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,6 +206,7 @@
 		C76AA80E1F4C09ED0074691F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C76AA8461F4C2E630074691F /* HomeTopicTitle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,6 +214,10 @@
 		C76AA80F1F4C09ED0074691F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C76AA83C1F4C27600074691F /* HomeNavigationView.swift */,
+				C76AA83E1F4C291F0074691F /* HomeSearchField.swift */,
+				C76AA8421F4C2CE70074691F /* HomePageView.swift */,
+				C76AA8441F4C2DDC0074691F /* HomeTitleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -220,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				C76AA83A1F4C1AF90074691F /* UIColor+Extension.swift */,
+				C76AA8401F4C297C0074691F /* UIView+Extension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -243,7 +261,6 @@
 		C76AA8141F4C09ED0074691F /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				C76AA8301F4C0BAB0074691F /* KKConst.swift */,
 			);
 			name = Tools;
 			path = View;
@@ -284,6 +301,7 @@
 		C76AA8191F4C09ED0074691F /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				C76AA8301F4C0BAB0074691F /* KKConst.swift */,
 				C76AA81A1F4C09ED0074691F /* AppDelegate.swift */,
 				C76AA81B1F4C09ED0074691F /* Info.plist */,
 				C76AA81C1F4C09ED0074691F /* LaunchScreen.storyboard */,
@@ -545,14 +563,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				C76AA8331F4C0D9D0074691F /* KKHomeController.swift in Sources */,
+				C76AA8431F4C2CE70074691F /* HomePageView.swift in Sources */,
 				C76AA82F1F4C0AA10074691F /* KKTabBarController.swift in Sources */,
 				C76AA8391F4C0DE00074691F /* KKMeViewController.swift in Sources */,
 				C76AA83B1F4C1AF90074691F /* UIColor+Extension.swift in Sources */,
 				C76AA8311F4C0BAB0074691F /* KKConst.swift in Sources */,
+				C76AA8471F4C2E630074691F /* HomeTopicTitle.swift in Sources */,
 				C76AA8371F4C0DCC0074691F /* KKWeiTouTiaoController.swift in Sources */,
+				C76AA8411F4C297C0074691F /* UIView+Extension.swift in Sources */,
+				C76AA83F1F4C291F0074691F /* HomeSearchField.swift in Sources */,
 				C76AA8351F4C0DAF0074691F /* KKVideoController.swift in Sources */,
 				C76AA8261F4C09ED0074691F /* AppDelegate.swift in Sources */,
 				C76AA82D1F4C0A7B0074691F /* KKNavigationController.swift in Sources */,
+				C76AA8451F4C2DDC0074691F /* HomeTitleView.swift in Sources */,
+				C76AA83D1F4C27600074691F /* HomeNavigationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,6 +814,7 @@
 				C76AA8041F4C087D0074691F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C76AA8051F4C087D0074691F /* Build configuration list for PBXNativeTarget "NewsTests" */ = {
 			isa = XCConfigurationList;
@@ -798,6 +823,7 @@
 				C76AA8071F4C087D0074691F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C76AA8081F4C087D0074691F /* Build configuration list for PBXNativeTarget "NewsUITests" */ = {
 			isa = XCConfigurationList;
@@ -806,6 +832,7 @@
 				C76AA80A1F4C087D0074691F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

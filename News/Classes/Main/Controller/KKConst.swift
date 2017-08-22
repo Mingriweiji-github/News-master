@@ -16,6 +16,9 @@ let KScreenHeight = UIScreen.main.bounds.size.height
 let isPhone6 = KScreenHeight == 667 ? true : false
 let isPhone6P = KScreenHeight == 736 ? true : false
 
+let isNight = "isNight"
+let KMargin = 15.0
+
 
 //URL
 let BASE_URL = "http://api.dantangapp.com/"
