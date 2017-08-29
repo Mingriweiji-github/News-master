@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0A4A62251B610D6165D4A869 /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC65221672F4A6FA7C018C4 /* Pods_News.framework */; };
+		C719A8481F554B5E00C30997 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719A8461F554B5E00C30997 /* HomeCollectionViewCell.swift */; };
+		C719A8491F554B5E00C30997 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C719A8471F554B5E00C30997 /* HomeCollectionViewCell.xib */; };
+		C719A84B1F55694500C30997 /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719A84A1F55694500C30997 /* TopicViewController.swift */; };
 		C76AA7E51F4C087D0074691F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C76AA7E41F4C087D0074691F /* Assets.xcassets */; };
 		C76AA7F31F4C087D0074691F /* NewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA7F21F4C087D0074691F /* NewsTests.swift */; };
 		C76AA7FE1F4C087D0074691F /* NewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA7FD1F4C087D0074691F /* NewsUITests.swift */; };
@@ -51,6 +54,9 @@
 /* Begin PBXFileReference section */
 		7A108DC61177B023F1E23DD1 /* Pods-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.debug.xcconfig"; path = "Pods/Target Support Files/Pods-News/Pods-News.debug.xcconfig"; sourceTree = "<group>"; };
 		9AC65221672F4A6FA7C018C4 /* Pods_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C719A8461F554B5E00C30997 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		C719A8471F554B5E00C30997 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		C719A84A1F55694500C30997 /* TopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
 		C76AA7DA1F4C087D0074691F /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C76AA7E41F4C087D0074691F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C76AA7EE1F4C087D0074691F /* NewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				C76AA8321F4C0D9D0074691F /* KKHomeController.swift */,
+				C719A84A1F55694500C30997 /* TopicViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -218,6 +225,8 @@
 				C76AA83E1F4C291F0074691F /* HomeSearchField.swift */,
 				C76AA8421F4C2CE70074691F /* HomePageView.swift */,
 				C76AA8441F4C2DDC0074691F /* HomeTitleView.swift */,
+				C719A8461F554B5E00C30997 /* HomeCollectionViewCell.swift */,
+				C719A8471F554B5E00C30997 /* HomeCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -445,7 +454,8 @@
 				TargetAttributes = {
 					C76AA7D91F4C087D0074691F = {
 						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = 28QAFTT8JV;
+						ProvisioningStyle = Automatic;
 					};
 					C76AA7ED1F4C087D0074691F = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -486,6 +496,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C719A8491F554B5E00C30997 /* HomeCollectionViewCell.xib in Resources */,
 				C76AA8281F4C09ED0074691F /* LaunchScreen.storyboard in Resources */,
 				C76AA8271F4C09ED0074691F /* Info.plist in Resources */,
 				C76AA7E51F4C087D0074691F /* Assets.xcassets in Resources */,
@@ -569,11 +580,13 @@
 				C76AA83B1F4C1AF90074691F /* UIColor+Extension.swift in Sources */,
 				C76AA8311F4C0BAB0074691F /* KKConst.swift in Sources */,
 				C76AA8471F4C2E630074691F /* HomeTopicTitle.swift in Sources */,
+				C719A8481F554B5E00C30997 /* HomeCollectionViewCell.swift in Sources */,
 				C76AA8371F4C0DCC0074691F /* KKWeiTouTiaoController.swift in Sources */,
 				C76AA8411F4C297C0074691F /* UIView+Extension.swift in Sources */,
 				C76AA83F1F4C291F0074691F /* HomeSearchField.swift in Sources */,
 				C76AA8351F4C0DAF0074691F /* KKVideoController.swift in Sources */,
 				C76AA8261F4C09ED0074691F /* AppDelegate.swift in Sources */,
+				C719A84B1F55694500C30997 /* TopicViewController.swift in Sources */,
 				C76AA82D1F4C0A7B0074691F /* KKNavigationController.swift in Sources */,
 				C76AA8451F4C2DDC0074691F /* HomeTitleView.swift in Sources */,
 				C76AA83D1F4C27600074691F /* HomeNavigationView.swift in Sources */,
@@ -710,11 +723,12 @@
 			baseConfigurationReference = 7A108DC61177B023F1E23DD1 /* Pods-News.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 28QAFTT8JV;
 				INFOPLIST_FILE = "$(SRCROOT)/News/Classes/Others/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.KK.News;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KK.NewsTod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -726,11 +740,12 @@
 			baseConfigurationReference = EDD9D9D6068A0E8752916FE8 /* Pods-News.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 28QAFTT8JV;
 				INFOPLIST_FILE = "$(SRCROOT)/News/Classes/Others/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.KK.News;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KK.NewsTod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
