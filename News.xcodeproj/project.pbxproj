@@ -33,6 +33,9 @@
 		C76AA8451F4C2DDC0074691F /* HomeTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA8441F4C2DDC0074691F /* HomeTitleView.swift */; };
 		C76AA8471F4C2E630074691F /* HomeTopicTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA8461F4C2E630074691F /* HomeTopicTitle.swift */; };
 		C7B9E6FC1F56A39600CF6D2C /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B9E6FB1F56A39600CF6D2C /* NetworkTool.swift */; };
+		C7B9E6FE1F56C0AC00CF6D2C /* default_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7B9E6FD1F56C0AC00CF6D2C /* default_theme.plist */; };
+		C7B9E7001F56C14900CF6D2C /* night_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7B9E6FF1F56C14900CF6D2C /* night_theme.plist */; };
+		C7B9E7021F56C24D00CF6D2C /* MyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B9E7011F56C24D00CF6D2C /* MyTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,9 @@
 		C76AA8441F4C2DDC0074691F /* HomeTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTitleView.swift; sourceTree = "<group>"; };
 		C76AA8461F4C2E630074691F /* HomeTopicTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTopicTitle.swift; sourceTree = "<group>"; };
 		C7B9E6FB1F56A39600CF6D2C /* NetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkTool.swift; path = News/Classes/Home/Controller/NetworkTool.swift; sourceTree = SOURCE_ROOT; };
+		C7B9E6FD1F56C0AC00CF6D2C /* default_theme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = default_theme.plist; sourceTree = "<group>"; };
+		C7B9E6FF1F56C14900CF6D2C /* night_theme.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = night_theme.plist; sourceTree = "<group>"; };
+		C7B9E7011F56C24D00CF6D2C /* MyTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTheme.swift; sourceTree = "<group>"; };
 		EDD9D9D6068A0E8752916FE8 /* Pods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.release.xcconfig"; path = "Pods/Target Support Files/Pods-News/Pods-News.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -313,11 +319,14 @@
 		C76AA8191F4C09ED0074691F /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				C7B9E6FF1F56C14900CF6D2C /* night_theme.plist */,
 				C76AA8301F4C0BAB0074691F /* KKConst.swift */,
 				C76AA81A1F4C09ED0074691F /* AppDelegate.swift */,
+				C7B9E7011F56C24D00CF6D2C /* MyTheme.swift */,
 				C76AA81B1F4C09ED0074691F /* Info.plist */,
 				C76AA81C1F4C09ED0074691F /* LaunchScreen.storyboard */,
 				C76AA81D1F4C09ED0074691F /* Main.storyboard */,
+				C7B9E6FD1F56C0AC00CF6D2C /* default_theme.plist */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -499,8 +508,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7B9E6FE1F56C0AC00CF6D2C /* default_theme.plist in Resources */,
 				C719A8491F554B5E00C30997 /* HomeCollectionViewCell.xib in Resources */,
 				C76AA8281F4C09ED0074691F /* LaunchScreen.storyboard in Resources */,
+				C7B9E7001F56C14900CF6D2C /* night_theme.plist in Resources */,
 				C76AA8271F4C09ED0074691F /* Info.plist in Resources */,
 				C76AA7E51F4C087D0074691F /* Assets.xcassets in Resources */,
 				C76AA8291F4C09ED0074691F /* Main.storyboard in Resources */,
@@ -579,6 +590,7 @@
 				C76AA8331F4C0D9D0074691F /* KKHomeController.swift in Sources */,
 				C76AA8431F4C2CE70074691F /* HomePageView.swift in Sources */,
 				C76AA82F1F4C0AA10074691F /* KKTabBarController.swift in Sources */,
+				C7B9E7021F56C24D00CF6D2C /* MyTheme.swift in Sources */,
 				C76AA8391F4C0DE00074691F /* KKMeViewController.swift in Sources */,
 				C76AA83B1F4C1AF90074691F /* UIColor+Extension.swift in Sources */,
 				C76AA8311F4C0BAB0074691F /* KKConst.swift in Sources */,

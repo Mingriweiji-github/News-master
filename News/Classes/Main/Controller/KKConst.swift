@@ -17,6 +17,7 @@ let isPhone6 = KScreenHeight == 667 ? true : false
 let isPhone6P = KScreenHeight == 736 ? true : false
 
 let isNight = "isNight"
+
 let KMargin: CGFloat = 15.0
 
 let IID: String = "5034850950"
