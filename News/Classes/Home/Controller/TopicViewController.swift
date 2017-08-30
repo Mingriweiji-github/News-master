@@ -10,6 +10,10 @@ import UIKit
 
 class TopicViewController: UIViewController {
 
+    var topicTitle : HomeTopicTitle?
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

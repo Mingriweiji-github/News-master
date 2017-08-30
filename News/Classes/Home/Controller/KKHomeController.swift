@@ -23,8 +23,17 @@ class KKHomeController: UIViewController {
         
         navigationItem.titleView = self.homeNavigationView
         
-        
-        
+        NetworkTool.loadHomeData(fromVC: String(describing:KKHomeController.self)) { (topicTitles, viewControllers) in
+            
+            for childVC in viewControllers{
+            
+                self.addChildViewController(childVC)
+            }
+            
+            self.setupUI()
+            self.pageView.titles = topicTitles
+            self.pageView.childVC = self.childViewControllers as? [TopicViewController]
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,6 +83,16 @@ extension KKHomeController{
         return .lightContent
     }
     
+}
+
+//-TextFieldDelegate
+extension KKHomeController : UITextFieldDelegate{
+
+    func textFieldshoudBegainEditing(_ textField:UITextField) ->Bool{
+    
+//        navigationController?.pushViewController(, animated: <#T##Bool#>)
+        return true
+    }
 }
 
 

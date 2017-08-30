@@ -19,11 +19,13 @@ let isPhone6P = KScreenHeight == 736 ? true : false
 let isNight = "isNight"
 let KMargin: CGFloat = 15.0
 
+let IID: String = "5034850950"
+/// iid 和 device_id 好像是绑定到一起的，不对应的话获取不到数据
+let device_id: String = "6096495334"
 
 //URL
-let BASE_URL = "http://api.dantangapp.com/"
-let KKTopData = "v2/channels/preset"
-let KKProductData = "v2/items"
+let BASE_URL = "https://is.snssdk.com/"
+
 
 let ReturnCode200 = 200
 let kAnimationDuration = 0.25

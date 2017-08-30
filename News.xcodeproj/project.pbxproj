@@ -32,6 +32,7 @@
 		C76AA8431F4C2CE70074691F /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA8421F4C2CE70074691F /* HomePageView.swift */; };
 		C76AA8451F4C2DDC0074691F /* HomeTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA8441F4C2DDC0074691F /* HomeTitleView.swift */; };
 		C76AA8471F4C2E630074691F /* HomeTopicTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA8461F4C2E630074691F /* HomeTopicTitle.swift */; };
+		C7B9E6FC1F56A39600CF6D2C /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B9E6FB1F56A39600CF6D2C /* NetworkTool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		C76AA8421F4C2CE70074691F /* HomePageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		C76AA8441F4C2DDC0074691F /* HomeTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTitleView.swift; sourceTree = "<group>"; };
 		C76AA8461F4C2E630074691F /* HomeTopicTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTopicTitle.swift; sourceTree = "<group>"; };
+		C7B9E6FB1F56A39600CF6D2C /* NetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkTool.swift; path = News/Classes/Home/Controller/NetworkTool.swift; sourceTree = SOURCE_ROOT; };
 		EDD9D9D6068A0E8752916FE8 /* Pods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.release.xcconfig"; path = "Pods/Target Support Files/Pods-News/Pods-News.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -270,6 +272,7 @@
 		C76AA8141F4C09ED0074691F /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C7B9E6FB1F56A39600CF6D2C /* NetworkTool.swift */,
 			);
 			name = Tools;
 			path = View;
@@ -583,6 +586,7 @@
 				C719A8481F554B5E00C30997 /* HomeCollectionViewCell.swift in Sources */,
 				C76AA8371F4C0DCC0074691F /* KKWeiTouTiaoController.swift in Sources */,
 				C76AA8411F4C297C0074691F /* UIView+Extension.swift in Sources */,
+				C7B9E6FC1F56A39600CF6D2C /* NetworkTool.swift in Sources */,
 				C76AA83F1F4C291F0074691F /* HomeSearchField.swift in Sources */,
 				C76AA8351F4C0DAF0074691F /* KKVideoController.swift in Sources */,
 				C76AA8261F4C09ED0074691F /* AppDelegate.swift in Sources */,
