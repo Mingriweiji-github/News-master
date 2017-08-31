@@ -7,13 +7,18 @@
 //
 
 import UIKit
-
+import BMPlayer
+import RxSwift
 class TopicViewController: UIViewController {
 
     var topicTitle : HomeTopicTitle?
+    var player = BMPlayer()
+    var disposeBag = DisposeBag()
+    var lastSelectedIndex = 0
+//    var newsTopic = <#value#>
     
     
-    
+    /***************API****************/
     override func viewDidLoad() {
         super.viewDidLoad()
 

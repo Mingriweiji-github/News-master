@@ -70,26 +70,19 @@ extension KKHomeController{
         
         NotificationCenter.default.addObserver(self, selector: #selector(homeTitleAddButtonClicked(notification:)), name: NSNotification.Name(rawValue:"homeTitleAddButtonClicked"), object: nil)
     }
-    
     func homeTitleAddButtonClicked(notification:Notification){
         let titles = notification.object as! [HomeTopicTitle]
-        
         print("添加栏目点击了")
-        
     }
-    
     override var preferredStatusBarStyle: UIStatusBarStyle{
     
         return .lightContent
     }
-    
 }
 
 //-TextFieldDelegate
 extension KKHomeController : UITextFieldDelegate{
-
     func textFieldshoudBegainEditing(_ textField:UITextField) ->Bool{
-    
 //        navigationController?.pushViewController(, animated: <#T##Bool#>)
         return true
     }
