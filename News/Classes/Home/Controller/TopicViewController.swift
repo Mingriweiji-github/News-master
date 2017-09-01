@@ -15,30 +15,61 @@ class TopicViewController: UIViewController {
     var player = BMPlayer()
     var disposeBag = DisposeBag()
     var lastSelectedIndex = 0
-//    var newsTopic = <#value#>
+    var newsTopic = [WeiTouTiao]()
     
     
     /***************API****************/
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+}
+//private func showVideoCell(indexpath:IndexPath) -> 
 
-    /*
-    // MARK: - Navigation
+extension TopicViewController: UITableViewDataSource{
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if topicTitle?.category == "subscription" {
+            return 10
+        }else{
+            return  newsTopic.count
+        }
     }
-    */
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        return  cell
+    }
 
+}
+extension TopicViewController: UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if topicTitle!.category == "video" {
+            return KScreenHeight * 0.3
+        }else if topicTitle!.category == "subscription" {
+            return 68
+        }else if topicTitle!.category == "essay_joke" {
+            return 60
+        }else{
+        
+            let weitoutiao = newsTopic[indexPath.row]
+            if weitoutiao.cell_type! == 32 {
+                return weitoutiao.contentHeight!
+            }else if weitoutiao.cell_type! == 50{
+                return 300
+            }
+            
+            return weitoutiao.homeCellHeight!
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+    }
 }

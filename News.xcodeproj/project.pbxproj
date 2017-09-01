@@ -36,6 +36,12 @@
 		C7B9E6FE1F56C0AC00CF6D2C /* default_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7B9E6FD1F56C0AC00CF6D2C /* default_theme.plist */; };
 		C7B9E7001F56C14900CF6D2C /* night_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7B9E6FF1F56C14900CF6D2C /* night_theme.plist */; };
 		C7B9E7021F56C24D00CF6D2C /* MyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B9E7011F56C24D00CF6D2C /* MyTheme.swift */; };
+		C7B9E7041F5945F900CF6D2C /* WeiTouTiao.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B9E7031F5945F900CF6D2C /* WeiTouTiao.swift */; };
+		C7B9E7061F59468200CF6D2C /* TheyUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B9E7051F59468200CF6D2C /* TheyUse.swift */; };
+		C7B9E7081F59478400CF6D2C /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B9E7071F59478400CF6D2C /* Date+Extension.swift */; };
+		C7B9E70B1F594CFA00CF6D2C /* VideoTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B9E7091F594CFA00CF6D2C /* VideoTopicCell.swift */; };
+		C7B9E70C1F594CFA00CF6D2C /* VideoTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B9E70A1F594CFA00CF6D2C /* VideoTopicCell.xib */; };
+		C7B9E70E1F594E9900CF6D2C /* NSString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B9E70D1F594E9900CF6D2C /* NSString+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +97,12 @@
 		C7B9E6FD1F56C0AC00CF6D2C /* default_theme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = default_theme.plist; sourceTree = "<group>"; };
 		C7B9E6FF1F56C14900CF6D2C /* night_theme.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = night_theme.plist; sourceTree = "<group>"; };
 		C7B9E7011F56C24D00CF6D2C /* MyTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTheme.swift; sourceTree = "<group>"; };
+		C7B9E7031F5945F900CF6D2C /* WeiTouTiao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeiTouTiao.swift; sourceTree = "<group>"; };
+		C7B9E7051F59468200CF6D2C /* TheyUse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheyUse.swift; sourceTree = "<group>"; };
+		C7B9E7071F59478400CF6D2C /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		C7B9E7091F594CFA00CF6D2C /* VideoTopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTopicCell.swift; sourceTree = "<group>"; };
+		C7B9E70A1F594CFA00CF6D2C /* VideoTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoTopicCell.xib; sourceTree = "<group>"; };
+		C7B9E70D1F594E9900CF6D2C /* NSString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Extension.swift"; sourceTree = "<group>"; };
 		EDD9D9D6068A0E8752916FE8 /* Pods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.release.xcconfig"; path = "Pods/Target Support Files/Pods-News/Pods-News.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				C76AA8461F4C2E630074691F /* HomeTopicTitle.swift */,
+				C7B9E7051F59468200CF6D2C /* TheyUse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,6 +268,8 @@
 			children = (
 				C76AA83A1F4C1AF90074691F /* UIColor+Extension.swift */,
 				C76AA8401F4C297C0074691F /* UIView+Extension.swift */,
+				C7B9E7071F59478400CF6D2C /* Date+Extension.swift */,
+				C7B9E70D1F594E9900CF6D2C /* NSString+Extension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -359,6 +374,8 @@
 		C76AA8211F4C09ED0074691F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C7B9E7091F594CFA00CF6D2C /* VideoTopicCell.swift */,
+				C7B9E70A1F594CFA00CF6D2C /* VideoTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -384,6 +401,7 @@
 		C76AA8241F4C09ED0074691F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C7B9E7031F5945F900CF6D2C /* WeiTouTiao.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -509,6 +527,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7B9E6FE1F56C0AC00CF6D2C /* default_theme.plist in Resources */,
+				C7B9E70C1F594CFA00CF6D2C /* VideoTopicCell.xib in Resources */,
 				C719A8491F554B5E00C30997 /* HomeCollectionViewCell.xib in Resources */,
 				C76AA8281F4C09ED0074691F /* LaunchScreen.storyboard in Resources */,
 				C7B9E7001F56C14900CF6D2C /* night_theme.plist in Resources */,
@@ -588,7 +607,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C76AA8331F4C0D9D0074691F /* KKHomeController.swift in Sources */,
+				C7B9E7081F59478400CF6D2C /* Date+Extension.swift in Sources */,
 				C76AA8431F4C2CE70074691F /* HomePageView.swift in Sources */,
+				C7B9E70E1F594E9900CF6D2C /* NSString+Extension.swift in Sources */,
 				C76AA82F1F4C0AA10074691F /* KKTabBarController.swift in Sources */,
 				C7B9E7021F56C24D00CF6D2C /* MyTheme.swift in Sources */,
 				C76AA8391F4C0DE00074691F /* KKMeViewController.swift in Sources */,
@@ -600,12 +621,15 @@
 				C76AA8411F4C297C0074691F /* UIView+Extension.swift in Sources */,
 				C7B9E6FC1F56A39600CF6D2C /* NetworkTool.swift in Sources */,
 				C76AA83F1F4C291F0074691F /* HomeSearchField.swift in Sources */,
+				C7B9E7061F59468200CF6D2C /* TheyUse.swift in Sources */,
 				C76AA8351F4C0DAF0074691F /* KKVideoController.swift in Sources */,
 				C76AA8261F4C09ED0074691F /* AppDelegate.swift in Sources */,
 				C719A84B1F55694500C30997 /* TopicViewController.swift in Sources */,
 				C76AA82D1F4C0A7B0074691F /* KKNavigationController.swift in Sources */,
+				C7B9E7041F5945F900CF6D2C /* WeiTouTiao.swift in Sources */,
 				C76AA8451F4C2DDC0074691F /* HomeTitleView.swift in Sources */,
 				C76AA83D1F4C27600074691F /* HomeNavigationView.swift in Sources */,
+				C7B9E70B1F594CFA00CF6D2C /* VideoTopicCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
