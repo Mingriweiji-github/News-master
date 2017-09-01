@@ -51,7 +51,47 @@ class NetworkTool{
             }
             
         }        
-        
     }
 
+    //解析视频
+    class func parseVideoRealURL(video_id:String,completeHandler:@escaping(_ realVideo:RealVideo)->()){
+    
+        let random = arc4random()
+        let url:NSString = "/video/urls/v/1/toutiao/mp4/\(video_id)?r=\(random)" as NSString
+        let data:NSData = url.data(using: String.Encoding.utf8.rawValue)! as NSData
+        var crc32 = data.getCRC32()
+        if crc32 < 0 {
+            crc32 += 0x100000000
+        }
+        
+        let realURL = "http://i.snssdk.com/video/urls/v/1/toutiao/mp4/\(video_id)?r=\(random)&s=\(crc32)"
+        Alamofire.request(realURL)
+            .responseJSON { (response) in
+                
+                guard response.result.isSuccess else{
+                
+                    return
+                }
+                
+                if let value = response.result.value{
+                
+                    let json = JSON(value)
+                    let dict = json["data"].dictionaryObject
+                    let video = RealVideo(dict: dict! as [String:AnyObject])
+                    completeHandler(video)
+                }
+                
+        }
+    
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

@@ -42,6 +42,7 @@
 		C7B9E70B1F594CFA00CF6D2C /* VideoTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B9E7091F594CFA00CF6D2C /* VideoTopicCell.swift */; };
 		C7B9E70C1F594CFA00CF6D2C /* VideoTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B9E70A1F594CFA00CF6D2C /* VideoTopicCell.xib */; };
 		C7B9E70E1F594E9900CF6D2C /* NSString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B9E70D1F594E9900CF6D2C /* NSString+Extension.swift */; };
+		C7B9E7121F596B6700CF6D2C /* NSData+CRC32.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B9E7111F596B6700CF6D2C /* NSData+CRC32.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,9 @@
 		C7B9E7091F594CFA00CF6D2C /* VideoTopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTopicCell.swift; sourceTree = "<group>"; };
 		C7B9E70A1F594CFA00CF6D2C /* VideoTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoTopicCell.xib; sourceTree = "<group>"; };
 		C7B9E70D1F594E9900CF6D2C /* NSString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Extension.swift"; sourceTree = "<group>"; };
+		C7B9E70F1F596B6700CF6D2C /* News-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "News-Bridging-Header.h"; sourceTree = "<group>"; };
+		C7B9E7101F596B6700CF6D2C /* NSData+CRC32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CRC32.h"; sourceTree = "<group>"; };
+		C7B9E7111F596B6700CF6D2C /* NSData+CRC32.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CRC32.m"; sourceTree = "<group>"; };
 		EDD9D9D6068A0E8752916FE8 /* Pods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.release.xcconfig"; path = "Pods/Target Support Files/Pods-News/Pods-News.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -270,6 +274,9 @@
 				C76AA8401F4C297C0074691F /* UIView+Extension.swift */,
 				C7B9E7071F59478400CF6D2C /* Date+Extension.swift */,
 				C7B9E70D1F594E9900CF6D2C /* NSString+Extension.swift */,
+				C7B9E7101F596B6700CF6D2C /* NSData+CRC32.h */,
+				C7B9E7111F596B6700CF6D2C /* NSData+CRC32.m */,
+				C7B9E70F1F596B6700CF6D2C /* News-Bridging-Header.h */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -485,6 +492,7 @@
 					C76AA7D91F4C087D0074691F = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 28QAFTT8JV;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					C76AA7ED1F4C087D0074691F = {
@@ -626,6 +634,7 @@
 				C76AA8261F4C09ED0074691F /* AppDelegate.swift in Sources */,
 				C719A84B1F55694500C30997 /* TopicViewController.swift in Sources */,
 				C76AA82D1F4C0A7B0074691F /* KKNavigationController.swift in Sources */,
+				C7B9E7121F596B6700CF6D2C /* NSData+CRC32.m in Sources */,
 				C7B9E7041F5945F900CF6D2C /* WeiTouTiao.swift in Sources */,
 				C76AA8451F4C2DDC0074691F /* HomeTitleView.swift in Sources */,
 				C76AA83D1F4C27600074691F /* HomeNavigationView.swift in Sources */,
@@ -763,6 +772,7 @@
 			baseConfigurationReference = 7A108DC61177B023F1E23DD1 /* Pods-News.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 28QAFTT8JV;
 				INFOPLIST_FILE = "$(SRCROOT)/News/Classes/Others/Info.plist";
@@ -771,6 +781,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.KK.NewsTod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "News/Classes/Main/Category/News-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -780,6 +792,7 @@
 			baseConfigurationReference = EDD9D9D6068A0E8752916FE8 /* Pods-News.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 28QAFTT8JV;
 				INFOPLIST_FILE = "$(SRCROOT)/News/Classes/Others/Info.plist";
@@ -788,6 +801,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.KK.NewsTod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "News/Classes/Main/Category/News-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

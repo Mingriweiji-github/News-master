@@ -9,6 +9,8 @@
 import UIKit
 import BMPlayer
 import RxSwift
+import RxCocoa
+
 class TopicViewController: UIViewController {
 
     var topicTitle : HomeTopicTitle?
@@ -28,7 +30,6 @@ class TopicViewController: UIViewController {
     }
     
 }
-//private func showVideoCell(indexpath:IndexPath) -> 
 
 extension TopicViewController: UITableViewDataSource{
 
@@ -43,6 +44,26 @@ extension TopicViewController: UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         return  cell
+    }
+    private func showVideoCell(indexpath:IndexPath) -> VideoTopicCell{
+        
+        let cell = Bundle.main.loadNibNamed(String(describing:VideoTopicCell.self), owner: nil, options: nil)?.last as! VideoTopicCell
+        cell.videoTopic = newsTopic[indexpath.row]
+        
+        //播放器点击
+        cell.playButton.rx.controlEvent(.touchUpInside)
+            .subscribe(onNext: { [weak self] in
+                //rx.controlEvent方法添加播放器
+                cell.playButton.addSubview(self!.player)
+                
+//                self?.player.snp.makeConstraints({ (make) in
+//                    make.edges.equalTo(cell.)
+//                })
+                
+            })
+        .addDisposableTo(disposeBag)
+        
+        return cell
     }
 
 }
