@@ -10,6 +10,7 @@ import UIKit
 import BMPlayer
 import RxSwift
 import RxCocoa
+import MJRefresh
 
 class TopicViewController: UIViewController {
 
@@ -23,14 +24,69 @@ class TopicViewController: UIViewController {
     /***************API****************/
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupUI()
+        if topicTitle?.category == "subscription" {//头条号
+            tableView.tableHeaderView = toutiaoHeader
+        }
+        
+        setRefresh()
+        
+        
 
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    func setupUI() {
+        
+        view.addSubview(tableView)
+    }
+    
+   fileprivate lazy var tableView: UITableView = {
+        
+        let tableView = UITableView()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorStyle = .none
+        tableView.tableFooterView = UIView()
+        tableView.estimatedRowHeight = 232
+        tableView.contentInset = UIEdgeInsetsMake(0, 0, 49, 0)
+        tableView.theme_backgroundColor = "colors.tableViewBackgroundColor"
+        return tableView
+    }()
+    
+    lazy var toutiaoHeader:ToutiaoHaoHeaderView  = {
+        let toutiaoHeader = ToutiaoHaoHeaderView()
+        toutiaoHeader.delegate = self as ToutiaohaoHeaderViewDelegate
+        toutiaoHeader.height = 56
+        return toutiaoHeader
+    }()
+    
+    
 }
+extension TopicViewController : ToutiaohaoHeaderViewDelegate{
 
+    func toutiaoHeaderButtonClicked(){
+    
+//        navigationController?.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: <#T##Bool#>)
+    print("toutiaoHeaderButtonClicked")
+        
+    }
+
+}
+extension TopicViewController{
+
+    @objc fileprivate func setRefresh(){
+    
+        let header =
+        
+    
+    }
+
+
+}
 extension TopicViewController: UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,6 +106,14 @@ extension TopicViewController: UITableViewDataSource{
         let cell = Bundle.main.loadNibNamed(String(describing:VideoTopicCell.self), owner: nil, options: nil)?.last as! VideoTopicCell
         cell.videoTopic = newsTopic[indexpath.row]
         
+        //header
+//        cell.headerBtn.rx.controlEvent(.touchUpInside)
+//            .subscribe(onNext: { [weak self] in
+//                
+//                let userVC 
+//                
+//            }, onError: <#T##((Error) -> Void)?##((Error) -> Void)?##(Error) -> Void#>, onCompleted: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>, onDisposed: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+//        
         //播放器点击
         cell.playButton.rx.controlEvent(.touchUpInside)
             .subscribe(onNext: { [weak self] in
@@ -59,6 +123,18 @@ extension TopicViewController: UITableViewDataSource{
 //                self?.player.snp.makeConstraints({ (make) in
 //                    make.edges.equalTo(cell.)
 //                })
+                NetworkTool.parseVideoRealURL(video_id: cell.videoTopic!.video_id!, completeHandler: { (realVideo) in
+                    
+                    self!.player.backBlock = {(isFullScreen) in
+                        
+                        if isFullScreen == true{
+                            return
+                        }
+                        let asset = BMPlayerResource(url: URL(string:realVideo.video_1!.main_url!)!, name: cell.titleLabel.text!)
+                        
+                        self!.player.setVideo(resource: asset)
+                    }
+                })
                 
             })
         .addDisposableTo(disposeBag)

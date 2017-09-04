@@ -14,8 +14,7 @@ class VideoTopicCell: UITableViewCell {
     @IBOutlet weak var playCountLabel: UILabel!
     @IBOutlet weak var playButton: UIButton!
     
-    @IBOutlet weak var headerImgView: UIImageView!
-
+    @IBOutlet weak var headerBtn: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var commentBtn: UIButton!
     @IBOutlet weak var durationLabel: UILabel!
@@ -29,7 +28,7 @@ class VideoTopicCell: UITableViewCell {
             playButton.kf.setBackgroundImage(with: URL(string:(videoTopic?.video_detail_info?.detail_video_large_image?.url!)!), for: .normal)
             titleLabel.text = String(describing: videoTopic?.title)
             if let user_info = videoTopic?.user_info {
-                headerImgView.kf.setImage(with: URL(string:user_info.avatar_url!))
+                headerBtn.kf.setImage(with: URL(string:user_info.avatar_url!), for: .normal)
                 nameLabel.text = user_info.name
             }
             

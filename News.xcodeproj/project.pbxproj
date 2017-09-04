@@ -21,7 +21,6 @@
 		C76AA82D1F4C0A7B0074691F /* KKNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA82C1F4C0A7B0074691F /* KKNavigationController.swift */; };
 		C76AA82F1F4C0AA10074691F /* KKTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA82E1F4C0AA10074691F /* KKTabBarController.swift */; };
 		C76AA8311F4C0BAB0074691F /* KKConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA8301F4C0BAB0074691F /* KKConst.swift */; };
-		C76AA8331F4C0D9D0074691F /* KKHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA8321F4C0D9D0074691F /* KKHomeController.swift */; };
 		C76AA8351F4C0DAF0074691F /* KKVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA8341F4C0DAF0074691F /* KKVideoController.swift */; };
 		C76AA8371F4C0DCC0074691F /* KKWeiTouTiaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA8361F4C0DCC0074691F /* KKWeiTouTiaoController.swift */; };
 		C76AA8391F4C0DE00074691F /* KKMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA8381F4C0DE00074691F /* KKMeViewController.swift */; };
@@ -42,7 +41,9 @@
 		C7B9E70B1F594CFA00CF6D2C /* VideoTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B9E7091F594CFA00CF6D2C /* VideoTopicCell.swift */; };
 		C7B9E70C1F594CFA00CF6D2C /* VideoTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B9E70A1F594CFA00CF6D2C /* VideoTopicCell.xib */; };
 		C7B9E70E1F594E9900CF6D2C /* NSString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B9E70D1F594E9900CF6D2C /* NSString+Extension.swift */; };
-		C7B9E7121F596B6700CF6D2C /* NSData+CRC32.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B9E7111F596B6700CF6D2C /* NSData+CRC32.m */; };
+		C7B9E7141F5CF6C800CF6D2C /* KKHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AA8321F4C0D9D0074691F /* KKHomeController.swift */; };
+		C7B9E7181F5D404700CF6D2C /* ToutiaoHaoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B9E7171F5D404700CF6D2C /* ToutiaoHaoHeaderView.swift */; };
+		C7B9E71A1F5D43B600CF6D2C /* RefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B9E7191F5D43B600CF6D2C /* RefreshHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,8 @@
 		C7B9E70F1F596B6700CF6D2C /* News-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "News-Bridging-Header.h"; sourceTree = "<group>"; };
 		C7B9E7101F596B6700CF6D2C /* NSData+CRC32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CRC32.h"; sourceTree = "<group>"; };
 		C7B9E7111F596B6700CF6D2C /* NSData+CRC32.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CRC32.m"; sourceTree = "<group>"; };
+		C7B9E7171F5D404700CF6D2C /* ToutiaoHaoHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToutiaoHaoHeaderView.swift; sourceTree = "<group>"; };
+		C7B9E7191F5D43B600CF6D2C /* RefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RefreshHeader.swift; path = News/Classes/Home/View/RefreshHeader.swift; sourceTree = SOURCE_ROOT; };
 		EDD9D9D6068A0E8752916FE8 /* Pods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.release.xcconfig"; path = "Pods/Target Support Files/Pods-News/Pods-News.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -250,6 +253,7 @@
 				C76AA83E1F4C291F0074691F /* HomeSearchField.swift */,
 				C76AA8421F4C2CE70074691F /* HomePageView.swift */,
 				C76AA8441F4C2DDC0074691F /* HomeTitleView.swift */,
+				C7B9E7171F5D404700CF6D2C /* ToutiaoHaoHeaderView.swift */,
 				C719A8461F554B5E00C30997 /* HomeCollectionViewCell.swift */,
 				C719A8471F554B5E00C30997 /* HomeCollectionViewCell.xib */,
 			);
@@ -301,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				C7B9E6FB1F56A39600CF6D2C /* NetworkTool.swift */,
+				C7B9E7191F5D43B600CF6D2C /* RefreshHeader.swift */,
 			);
 			name = Tools;
 			path = View;
@@ -614,7 +619,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C76AA8331F4C0D9D0074691F /* KKHomeController.swift in Sources */,
+				C7B9E7141F5CF6C800CF6D2C /* KKHomeController.swift in Sources */,
 				C7B9E7081F59478400CF6D2C /* Date+Extension.swift in Sources */,
 				C76AA8431F4C2CE70074691F /* HomePageView.swift in Sources */,
 				C7B9E70E1F594E9900CF6D2C /* NSString+Extension.swift in Sources */,
@@ -628,13 +633,14 @@
 				C76AA8371F4C0DCC0074691F /* KKWeiTouTiaoController.swift in Sources */,
 				C76AA8411F4C297C0074691F /* UIView+Extension.swift in Sources */,
 				C7B9E6FC1F56A39600CF6D2C /* NetworkTool.swift in Sources */,
+				C7B9E71A1F5D43B600CF6D2C /* RefreshHeader.swift in Sources */,
 				C76AA83F1F4C291F0074691F /* HomeSearchField.swift in Sources */,
 				C7B9E7061F59468200CF6D2C /* TheyUse.swift in Sources */,
+				C7B9E7181F5D404700CF6D2C /* ToutiaoHaoHeaderView.swift in Sources */,
 				C76AA8351F4C0DAF0074691F /* KKVideoController.swift in Sources */,
 				C76AA8261F4C09ED0074691F /* AppDelegate.swift in Sources */,
 				C719A84B1F55694500C30997 /* TopicViewController.swift in Sources */,
 				C76AA82D1F4C0A7B0074691F /* KKNavigationController.swift in Sources */,
-				C7B9E7121F596B6700CF6D2C /* NSData+CRC32.m in Sources */,
 				C7B9E7041F5945F900CF6D2C /* WeiTouTiao.swift in Sources */,
 				C76AA8451F4C2DDC0074691F /* HomeTitleView.swift in Sources */,
 				C76AA83D1F4C27600074691F /* HomeNavigationView.swift in Sources */,

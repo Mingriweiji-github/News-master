@@ -31,7 +31,7 @@ class NetworkTool{
                     var homeTopicVCs = [TopicViewController]()
                     //推荐标题
                     let recommandDic = ["category":"","name":"推荐"]
-                    let recommand = HomeTopicTitle(dict: (recommandDic as? [String: AnyObject])!)
+                    let recommand = HomeTopicTitle(dict: (recommandDic as [String: AnyObject]))
                     titles.append(recommand)
                     //推荐的控制器
                     let firstVC = TopicViewController()
@@ -53,7 +53,7 @@ class NetworkTool{
         }        
     }
 
-    //解析视频
+    //MARK:解析视频
     class func parseVideoRealURL(video_id:String,completeHandler:@escaping(_ realVideo:RealVideo)->()){
     
         let random = arc4random()
