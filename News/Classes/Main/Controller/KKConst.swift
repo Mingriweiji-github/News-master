@@ -23,6 +23,7 @@ let KMargin: CGFloat = 15.0
 let IID: String = "5034850950"
 /// iid 和 device_id 好像是绑定到一起的，不对应的话获取不到数据
 let device_id: String = "6096495334"
+let versionCode = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
 
 //URL
 let BASE_URL = "https://is.snssdk.com/"

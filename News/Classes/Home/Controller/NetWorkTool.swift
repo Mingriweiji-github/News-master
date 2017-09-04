@@ -85,6 +85,47 @@ class NetworkTool{
     
     
     }
+    //获取首页不同分类的内容和视频的内容使用同一接口
+   class func loadHomeCategoryNewsFeed(category:String,completeHandler:@escaping(_ nowTime:TimeInterval,_ newsTopics:[WeiTouTiao])->()){
+    
+    let url = BASE_URL + "api/news/feed/v58/?"
+    let params = ["device_id": device_id,
+                  "category": category,
+                  "iid": IID,
+                  "device_platform": "iphone",
+                  "version_code": versionCode]
+    let nowtime = NSDate().timeIntervalSince1970
+    Alamofire.request(url,parameters:params)
+        .responseJSON { (response) in
+            guard response.result.isSuccess else{return}
+            if let value = response.result.value{
+            
+                let json = JSON(value)
+                guard let dataJSON = json["data"].array else{return}
+                var topics = [WeiTouTiao]()
+                for data in dataJSON{
+                   if let content = data["content"].string {
+                    
+                        let contentData:NSData = content.data(using:String.Encoding.utf8)! as NSData
+                        do{
+                        
+                            let dict = try JSONSerialization.jsonObject(with: contentData as Data, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
+                            let topic  = WeiTouTiao(dict: dict as! [String:AnyObject])
+                            topics.append(topic)
+                            print("------------")
+                        }catch{
+                        
+                        }
+                    
+                    }
+                }
+                
+                completeHandler(nowtime,topics)
+                
+            }
+            
+    }
+}
     
     
     

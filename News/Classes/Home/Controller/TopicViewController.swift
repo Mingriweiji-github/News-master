@@ -11,6 +11,7 @@ import BMPlayer
 import RxSwift
 import RxCocoa
 import MJRefresh
+import SVProgressHUD
 
 class TopicViewController: UIViewController {
 
@@ -80,9 +81,45 @@ extension TopicViewController{
 
     @objc fileprivate func setRefresh(){
     
-        let header =
+        let header = RefreshHeader { 
+            [weak self] in
+            NetworkTool.loadHomeCategoryNewsFeed(category: (self?.topicTitle?.category)!, completeHandler: { (nowTime, newsTopics) in
+                self?.tableView.mj_header.endRefreshing()
+                self?.newsTopic = newsTopics
+                self?.tableView.reloadData()
+            })
+        }
+        header?.isAutomaticallyChangeAlpha = true
+        header?.lastUpdatedTimeLabel.isHidden = true
+        tableView.mj_header = header
+        tableView.mj_header.beginRefreshing()
         
+        tableView.mj_footer = MJRefreshBackNormalFooter(refreshingBlock: { 
+            [weak self] in
+            NetworkTool.loadHomeCategoryNewsFeed(category: self!.topicTitle!.category!, completeHandler: { (nowtime, newsTopics) in
+                
+                self?.tableView.mj_footer.endRefreshing()
+                if newsTopics.count == 0 {
+                
+                    SVProgressHUD.setForegroundColor(UIColor.white)
+                    SVProgressHUD.setBackgroundColor(UIColor(r: 0, g: 0, b: 0, alpha: 0.3))
+                    SVProgressHUD.showInfo(withStatus: "没有更多新闻了")
+                    return
+                }
+                self?.newsTopic += newsTopics
+                self?.tableView.reloadData()
+                
+            })
+        })
     
+    }
+    
+    @objc fileprivate func tabbarSelected(){
+    
+        if lastSelectedIndex != tabBarController?.selectedIndex {
+            tableView.mj_header.beginRefreshing()
+        }
+        lastSelectedIndex = tabBarController!.selectedIndex
     }
 
 
@@ -99,6 +136,8 @@ extension TopicViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        
         return  cell
     }
     private func showVideoCell(indexpath:IndexPath) -> VideoTopicCell{
